@@ -9,6 +9,7 @@ nnoremap <right> <nop>
 set nu rnu
 set ruler
 " Usability
+set nocompatible
 set mouse=a
 " Color
 set t_Co=256
@@ -37,3 +38,4 @@ set title
 set ttyfast
 set virtualedit=all
 syntax on
+map <Esc><Esc> :w<CR>
