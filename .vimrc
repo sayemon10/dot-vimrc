@@ -6,13 +6,6 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-set nu rnu
-set ruler
-" Usability
-set nocompatible
-set mouse=a
-" Color
-set t_Co=256
 filetype indent on
 set autoindent
 set colorcolumn=80
@@ -22,9 +15,13 @@ set foldenable
 set guicursor=
 set hidden
 set incsearch
+set mouse=a
 set nobackup
+set nocompatible
 set noswapfile
 set nowritebackup
+set rnu
+set ruler
 set shiftwidth=4
 set shortmess+=I
 set showcmd
@@ -32,8 +29,10 @@ set showmode
 set signcolumn
 set smartindent
 set smarttab
+set softtabstop=4
 set statusline=
-set tabstop=4 softtabstop=4
+set t_Co=256
+set tabstop=4 
 set title
 set ttyfast
 set virtualedit=all
