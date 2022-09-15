@@ -1,12 +1,12 @@
-" ~/.vimrc
 " Author: sayemon10
 " url: https://sayemon10.com
-" Arrow Key off
-nnoremap <up> <nop>
+" ~/.vimrc
+filetype indent on
+map <Esc><Esc> :w<CR>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-filetype indent on
+nnoremap <up> <nop>
 set autoindent
 set colorcolumn=80
 set encoding=UTF-8
@@ -14,6 +14,7 @@ set et
 set foldenable
 set guicursor=
 set hidden
+set history=5112
 set incsearch
 set mouse=a
 set nobackup
@@ -36,5 +37,4 @@ set tabstop=4
 set title
 set ttyfast
 set virtualedit=all
-syntax on
-map <Esc><Esc> :w<CR>
+syntax on enable
