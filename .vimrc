@@ -7,6 +7,7 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags    
 set autoindent
 set colorcolumn=80
 set encoding=UTF-8
