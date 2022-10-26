@@ -7,8 +7,9 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags    
+autocmd FileType html 
 set autoindent
+set backspace=indent,eol,start
 set colorcolumn=80
 set encoding=UTF-8
 set et
@@ -22,6 +23,7 @@ set nobackup
 set nocompatible
 set noswapfile
 set nowritebackup
+set omnifunc=htmlcomplete#CompleteTags    
 set rnu
 set ruler
 set shiftwidth=4
