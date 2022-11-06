@@ -7,10 +7,10 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
-autocmd FileType html 
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 set autoindent
-set backspace=indent,eol,start
 set colorcolumn=80
+set complete+=kspell
 set encoding=UTF-8
 set et
 set foldenable
@@ -18,12 +18,12 @@ set guicursor=
 set hidden
 set history=5112
 set incsearch
+set laststatus=2
 set mouse=a
 set nobackup
 set nocompatible
 set noswapfile
 set nowritebackup
-set omnifunc=htmlcomplete#CompleteTags    
 set rnu
 set ruler
 set shiftwidth=4
