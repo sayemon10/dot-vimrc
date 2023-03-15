@@ -19,6 +19,7 @@ set hidden
 set history=5112
 set incsearch
 set laststatus=2
+set listchars=trail:-
 set mouse=a
 set nobackup
 set nocompatible
