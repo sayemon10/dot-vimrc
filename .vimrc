@@ -14,6 +14,8 @@ nnoremap <up> <nop>
 nnoremap o o<esc>
 nnoremap O O<esc>
 nnoremap <leader>v :vsplit
+nnoremap <leader>s :split
+nnoremap <leader>w :%s/\s\+$//e
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 colorscheme gruvbox
 set autoindent
@@ -51,7 +53,7 @@ set smarttab
 set softtabstop=4
 set statusline=
 set t_Co=256
-set tabstop=4 
+set tabstop=4
 set title
 set ttyfast
 set virtualedit=all
