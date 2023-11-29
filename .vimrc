@@ -1,16 +1,23 @@
 " Author: sayemon10
 " url: https://sayemon10.com
-" ~/.vimrc
 filetype indent on
 map <Esc><Esc> :w<CR>
+let mapleader = "-"
+let g:airline_section_b = '%{strftime("%c")}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='simple'
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
 nnoremap o o<esc>
 nnoremap O O<esc>
+nnoremap <leader>v :vsplit
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+colorscheme gruvbox
 set autoindent
+set background=dark
 set colorcolumn=80
 set complete+=kspell
 set encoding=UTF-8
@@ -51,7 +58,6 @@ set virtualedit=all
 set wildmenu
 set wildignore=*.exe,*.dll,*.pdb
 syntax on enable
-let mapleader = "<Space>"
 
 call plug#begin('~/vim/plugged')
 
@@ -59,6 +65,8 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
