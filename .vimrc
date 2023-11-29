@@ -7,6 +7,7 @@ let g:airline_section_b = '%{strftime("%c")}'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline_powerline_fonts = 1
 let g:airline_theme='simple'
+let g:user_emmet_leader_key='<C-Z>'
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
@@ -22,6 +23,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 colorscheme gruvbox
 set autoindent
 set background=dark
+set backspace=2
 set colorcolumn=80
 set complete+=kspell
 set encoding=UTF-8
@@ -71,6 +73,7 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
