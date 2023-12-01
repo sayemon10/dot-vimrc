@@ -1,6 +1,6 @@
 " Author: sayemon10
 " url: https://sayemon10.com
-filetype indent on
+filetype plugin indent on
 map <Esc><Esc> :w<CR>
 let mapleader = "-"
 let g:airline_section_b = '%{strftime("%c")}'
@@ -17,8 +17,6 @@ nnoremap O O<esc>
 nnoremap <leader>v :vsplit
 nnoremap <leader>s :split
 nnoremap <leader>w :%s/\s\+$//e
-nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <leader>f :Rg<CR>
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 colorscheme gruvbox
 set autoindent
