@@ -17,6 +17,7 @@ nnoremap O O<esc>
 nnoremap <leader>v :vsplit
 nnoremap <leader>s :split
 nnoremap <leader>w :%s/\s\+$//e
+nnoremap <leader>f :e .
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 colorscheme gruvbox
 set autoindent
@@ -43,6 +44,7 @@ set nobackup
 set nocompatible
 set noswapfile
 set nowritebackup
+set path+=**
 set rnu
 set ruler
 set shiftwidth=4
