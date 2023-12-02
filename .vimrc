@@ -1,25 +1,29 @@
 " Author: sayemon10
 " url: https://sayemon10.com
+
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+colorscheme gruvbox
 filetype plugin indent on
-map <Esc><Esc> :w<CR>
-let mapleader = "-"
-let g:airline_section_b = '%{strftime("%c")}'
-let g:airline_section_y = 'BN: %{bufnr("%")}'
+
 let g:airline_powerline_fonts = 1
+let g:airline_section_b = 'BN: %{bufnr("%")}'
+let g:airline_section_y = '%{strftime("%c")}'
 let g:airline_theme='simple'
+let g:files_respect_gitignore = 1
 let g:user_emmet_leader_key='<C-Z>'
+let mapleader = "-"
+map <Esc><Esc> :w<CR>
 nnoremap <down> <nop>
+nnoremap <leader>f :e .
+nnoremap <leader>s :split
+nnoremap <leader>v :vsplit
+nnoremap <leader>w :%s/\s\+$//e
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
-nnoremap o o<esc>
 nnoremap O O<esc>
-nnoremap <leader>v :vsplit
-nnoremap <leader>s :split
-nnoremap <leader>w :%s/\s\+$//e
-nnoremap <leader>f :e .
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-colorscheme gruvbox
+nnoremap o o<esc>
+
 set autoindent
 set background=dark
 set backspace=2
@@ -30,8 +34,8 @@ set et
 set expandtab
 set foldenable
 set guicursor=n-v-c-i:block
-set guioptions-=m
 set guioptions-=T
+set guioptions-=m
 set guioptions-=r
 set hidden
 set history=5112
@@ -61,8 +65,8 @@ set tabstop=4
 set title
 set ttyfast
 set virtualedit=all
-set wildmenu
 set wildignore=*.exe,*.dll,*.pdb
+set wildmenu
 syntax on enable
 
 call plug#begin('~/vim/plugged')
@@ -74,6 +78,7 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim'
+Plug 'Donaldttt/fuzzyy'
 
 call plug#end()
 
