@@ -79,6 +79,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim'
 Plug 'Donaldttt/fuzzyy'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
