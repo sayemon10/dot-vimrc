@@ -3,6 +3,7 @@
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 filetype plugin indent on
+colorscheme gruvbox
 
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = 'BN: %{bufnr("%")}'
@@ -81,7 +82,6 @@ Plug 'Donaldttt/fuzzyy'
 
 call plug#end()
 
-colorscheme gruvbox
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
