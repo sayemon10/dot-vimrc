@@ -2,7 +2,6 @@
 " url: https://sayemon10.com
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-colorscheme gruvbox
 filetype plugin indent on
 
 let g:airline_powerline_fonts = 1
@@ -38,7 +37,7 @@ set guioptions-=T
 set guioptions-=m
 set guioptions-=r
 set hidden
-set history=5112
+set history=1000
 set incsearch
 set is
 set laststatus=2
@@ -82,6 +81,7 @@ Plug 'Donaldttt/fuzzyy'
 
 call plug#end()
 
+colorscheme gruvbox
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
