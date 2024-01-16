@@ -58,6 +58,7 @@ set showmode
 set signcolumn
 set smartindent
 set smarttab
+set smoothscroll sms
 set softtabstop=4
 set statusline=
 set t_Co=256
@@ -70,7 +71,6 @@ set wildmenu
 syntax on enable
 
 call plug#begin('~/vim/plugged')
-
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -80,7 +80,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim'
 Plug 'Donaldttt/fuzzyy'
 Plug 'morhetz/gruvbox'
-
 call plug#end()
 
 function! s:on_lsp_buffer_enabled() abort
