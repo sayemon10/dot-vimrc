@@ -23,6 +23,12 @@ nnoremap <right> <nop>
 nnoremap <up> <nop>
 nnoremap O O<esc>
 nnoremap o o<esc>
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 set autoindent
 set background=dark
@@ -79,6 +85,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim'
 Plug 'Donaldttt/fuzzyy'
+Plug 'sheerun/vim-polyglot'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'morhetz/gruvbox'
 call plug#end()
 
