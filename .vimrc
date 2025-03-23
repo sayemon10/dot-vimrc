@@ -57,6 +57,10 @@ set nowritebackup
 set path+=**
 set rnu
 set ruler
+set shell=C:\\Program\ Files\\Git\\bin\\bash.exe
+set shellemdflag=--login\ -i
+set shellquote=
+set shellxquote=
 set shiftwidth=4
 set shortmess+=I
 set showcmd
