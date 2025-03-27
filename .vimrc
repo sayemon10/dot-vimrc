@@ -30,6 +30,22 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+" Github Copilot
+function! ToggleCopilot()
+    if copilot#Enabled()
+        Copilot disable
+    else
+        Copilot enable
+    endif
+    " echo "Copilot is " .(g:CopilotEnabled ? "enabled" : "disabled")
+    Copilot status  
+endfunction
+
+inoremap <F12> <ESC>:call ToggleCopilot()<CR>a
+nnoremap <F12> :call ToggleCopilot()<CR>
+imap <C-M-[> <Plug>(copilot-previous)
+imap <C-M-]> <Plug>(copilot-next)
+
 set autoindent
 set background=dark
 set backspace=2
@@ -58,7 +74,7 @@ set path+=**
 set rnu
 set ruler
 set shell=C:\\Program\ Files\\Git\\bin\\bash.exe
-set shellemdflag=--login\ -i
+set shellcmdflag=--login\ -i
 set shellquote=
 set shellxquote=
 set shiftwidth=4
