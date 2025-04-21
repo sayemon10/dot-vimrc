@@ -1,17 +1,10 @@
 " Author: sayemon10
-" url: https://sayemon10.com
+" url: https://www.sayemon10.com
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 filetype plugin indent on
 colorscheme gruvbox
 
-let g:airline_powerline_fonts = 1
-let g:airline_section_b = 'BN: %{bufnr("%")}'
-let g:airline_section_y = '%{strftime("%c")}'
-let g:airline_theme='simple'
-let g:files_respect_gitignore = 1
-let g:user_emmet_leader_key='<C-Z>'
-let mapleader = "-"
 map <Esc><Esc> :w<CR>
 nnoremap <down> <nop>
 nnoremap <leader>f :e .
@@ -29,6 +22,28 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+map <F5> :bp<CR>
+imap <F5> <Esc>:bp<CR>
+tmap <F5> <C-W>:bp<CR>
+map <F6> :bn<CR>
+imap <F6> <Esc>:bn<CR>
+tmap <F6> <C-W>:bn<CR>
+map <F7> :bd<CR>
+imap <F7> <Esc>:bd<CR>
+map <F8> :ls<CR>
+imap <F8> <Esc>:ls<CR>
+tmap <F8> <C-W>:ls<CR>
+" Copy current file path
+map <F9> :let @+ = fnamemodify(@%, ":p")<CR>
+imap <F9> <Esc>:let @+ = fnamemodify(@%, ":p")<CR>
+" Go to previous/next quickfix result (for example, useful for going through
+" :grep or
+" :vimgrep results)
+map <F10> :cp<CR>
+imap <F10> <Esc>:cp<CR>
+map <F11> :cn<CR>
+imap <F11> <Esc>:cn<CR>
+map <F1> :Copilot panel<CR>
 
 " Github Copilot
 function! ToggleCopilot()
@@ -38,7 +53,7 @@ function! ToggleCopilot()
         Copilot enable
     endif
     " echo "Copilot is " .(g:CopilotEnabled ? "enabled" : "disabled")
-    Copilot status  
+    Copilot status
 endfunction
 
 inoremap <F12> <ESC>:call ToggleCopilot()<CR>a
@@ -92,7 +107,7 @@ set tabstop=4
 set title
 set ttyfast
 set virtualedit=all
-set wildignore=*.exe,*.dll,*.pdb
+set wildignore+=*.exe,*.dll,*.pdb,*/node_modules/*,.next/*,.git/*
 set wildmenu
 syntax on enable
 
@@ -110,6 +125,18 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'morhetz/gruvbox'
 call plug#end()
 
+let g:airline_powerline_fonts = 1
+let g:airline_section_b = 'BN: %{bufnr("%")}'
+let g:airline_section_y = '%{strftime("%c")}'
+let g:airline_theme='simple'
+let g:files_respect_gitignore = 1
+let g:user_emmet_leader_key='<C-Z>'
+let mapleader = "-"
+let g:fuzzyy_exclude_file = ['node_modules/**', '.git/**', '.next/**', 'dist/**', 'build/**']
+let g:fuzzyy_files_exclude_file = ['node_modules/**', '.git/**', '.next/**', 'dist/**', 'build/**']
+let g:fuzzyy_grep_exclude_file = ['node_modules/**', '.git/**', '.next/**']
+let g:fuzzyy_mru_exclude_file = ['node_modules/**', '.git/**', '.next/**']
+let g:fuzzyy_files_cmd = 'rg --files --hidden --glob "!node_modules/*" --glob "!.git/*" --glob "!.next/*" --glob "!dist/*" --glob "!build/*"'
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
