@@ -1,6 +1,20 @@
 " Author: sayemon10
 " url: https://www.sayemon10.com
 
+call plug#begin('~/vim/plugged')
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'mattn/emmet-vim'
+Plug 'Donaldttt/fuzzyy'
+Plug 'sheerun/vim-polyglot'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'morhetz/gruvbox'
+call plug#end() 
+
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 filetype plugin indent on
 colorscheme gruvbox
@@ -110,20 +124,6 @@ set virtualedit=all
 set wildignore+=*.exe,*.dll,*.pdb,*/node_modules/*,.next/*,.git/*
 set wildmenu
 syntax on enable
-
-call plug#begin('~/vim/plugged')
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'mattn/emmet-vim'
-Plug 'Donaldttt/fuzzyy'
-Plug 'sheerun/vim-polyglot'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'morhetz/gruvbox'
-call plug#end()
 
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = 'BN: %{bufnr("%")}'
